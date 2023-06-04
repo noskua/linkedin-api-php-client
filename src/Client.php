@@ -136,7 +136,7 @@ class Client
     ];
 
     public function setVersion(string $version='202208'){
-        $apiHeaders['LinkedIn-Version'] = $version;
+        $this->apiHeaders['LinkedIn-Version'] = $version;
     }
     /**
      * Get list of headers
