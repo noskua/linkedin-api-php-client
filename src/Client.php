@@ -500,7 +500,7 @@ class Client
             'headers' => $headers,
         ]);
         if (!empty($params) && Method::GET === $method) {
-            $endpoint .= '?' . Query::build($params);
+            $endpoint .= '?' . Query::build($params, false);
         }
         try {
             $response = $guzzle->request($method, $endpoint, $options);
